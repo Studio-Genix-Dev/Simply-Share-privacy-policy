@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data Deletion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    section {
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    a:hover {
+      color: #3182ce;
+      transition: color 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto my-10 p-6 bg-white rounded-lg shadow-md">
+    <!-- Title -->
+    <header class="text-center mb-6">
+      <h1 class="text-3xl font-bold text-gray-900">User Data Deletion Instructions</h1>
+      <p class="text-sm text-gray-600 mt-2">Effective Date: <strong>17th December 2024</strong></p>
+    </header>
+
+    <!-- Table of Contents Dropdown -->
+    <div class="relative mb-8">
+      <button id="tocToggle" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg text-left font-medium shadow-md flex items-center justify-between">
+        <span>Table of Contents</span>
+        <span class="material-icons">arrow_drop_down</span>
+      </button>
+      <nav id="tocContent" class="hidden bg-gray-50 p-4 rounded-lg shadow-md mt-2">
+        <ul class="list-decimal list-inside space-y-1">
+          <li><a href="#request" class="text-blue-500 hover:underline">1. Data Deletion Request</a></li>
+          <li><a href="#contact" class="text-blue-500 hover:underline">2. Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Sections -->
+    <section id="request">
+      <h2 class="text-2xl font-semibold mb-2 text-gray-700 flex items-center">
+        <span class="material-icons text-blue-500 mr-2">delete</span> 1. Data Deletion Request
+      </h2>
+      <p class="text-gray-600">
+        At <span class="font-semibold">Simply Share</span>, we take your privacy seriously. If you want to delete any personal data associated with our app, please follow the steps below:
+      </p>
+      <ol class="list-decimal list-inside space-y-2 text-gray-600 mt-4">
+        <li>Send us an email at: <strong>studiogenixdev@gmail.com</strong></li>
+        <li>Include the subject: <strong><em>"User Data Deletion Request"</em></strong></li>
+        <li>Provide the following details in the email:
+          <ul class="list-disc list-inside ml-4 space-y-2">
+            <strong><li>Your full name</li></strong>
+            <strong><li>Your Facebook user ID</li></strong>
+          </ul>
+        </li>
+      </ol>
+      <p class="text-gray-600 mt-4">
+        Once we receive your request, we will delete all your associated data from our systems within <strong>7 business days</strong>.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2 class="text-2xl font-semibold mb-2 text-gray-700 flex items-center">
+        <span class="material-icons text-blue-500 mr-2">email</span> 2. Contact Us
+      </h2>
+      <p class="text-gray-600">
+        If you have further questions regarding data deletion or privacy, please contact us at:
+        <strong class="text-gray-900">studiogenixdev@gmail.com</strong>.
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-gray-600 text-sm">
+      <p>&copy; 2024 Studio Genix. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Script to Toggle Dropdown -->
+  <script>
+    const tocToggle = document.getElementById('tocToggle');
+    const tocContent = document.getElementById('tocContent');
+
+    tocToggle.addEventListener('click', () => {
+      tocContent.classList.toggle('hidden');
+      const icon = tocToggle.querySelector('span.material-icons');
+      icon.textContent = tocContent.classList.contains('hidden') ? 'arrow_drop_down' : 'arrow_drop_up';
+    });
+  </script>
+</body>
+</html>
